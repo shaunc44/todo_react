@@ -22,10 +22,23 @@
 	<script type="text/babel">
 		var destination = document.querySelector("#container");
 
+		var TodoList = React.createClass({
+			render: function() {
+				return (
+					<div className="todoListMain">
+						<div className="header">
+							<form>
+								<input placeholder="enter task"></input>
+								<button type="sumbit">Add</button>
+							</form>
+						</div>
+					</div>
+				);
+			}
+		});
+
 		ReactDOM.render(
-			<div>
-				Hello!
-			</div>,
+			<div><TodoList/></div>,
 			destination
 		);
 	</script>
@@ -33,3 +46,9 @@
 
 
 </html>
+
+
+
+
+
+
