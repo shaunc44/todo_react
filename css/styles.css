@@ -1,0 +1,26 @@
+body {
+	padding:						50px;
+	background-color: 	#6CF;
+	font-family:				sans-serif;
+}
+
+.todoListMain .header input {
+	padding: 						10px;
+	font-size: 					16px;
+	border: 						2px solid #FFF;
+}
+
+.todoListMain .header button {
+	padding: 						10px;
+	font-size: 					16px;
+	margin: 						10px;
+	background-color: 	#06F;
+	color: 							#FFF;
+	border: 						2px solid #06F;
+}
+
+.todoListMain .header button:hover {
+	background-color: 	#039;
+	border: 						2px solid #039;
+	cursor: 						pointer;
+}
