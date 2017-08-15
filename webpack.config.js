@@ -17,6 +17,14 @@ module.exports = {
 			}
 		]
 	},
+	// module: {
+	// 	rules: [
+	// 		{
+	// 			test: 		/\.css$/,
+	// 			use: 			[ 'style-loader', 'css-loader' ]
+	// 		}
+	// 	]
+	// },
 	output: {
 		filename: 		'transformed.js',
 		path: 				__dirname + '/build'
@@ -25,14 +33,14 @@ module.exports = {
 };
 
 
-module.exports = {
-	entry: 					__dirname + '/app/components/index.css',
-	module: {
-		rules: [
-			{
-				test: 		/\.css$/,
-				use: 			[ 'style-loader', 'css-loader' ]
-			}
-		]
-	}
-};
+// module.exports = {
+// 	entry: 					__dirname + '/app/components/index.css',
+// 	module: {
+// 		rules: [
+// 			{
+// 				test: 		/\.css$/,
+// 				use: 			[ 'style-loader', 'css-loader' ]
+// 			}
+// 		]
+// 	}
+// };
