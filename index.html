@@ -1,4 +1,5 @@
-<!-- https://www.kirupa.com/react/simple_todo_app_react.htm -->
+<!--kirupa com react/simple_todo_app_react.htm-->
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
@@ -17,9 +18,11 @@
 
 <body>
 	<div id="container">
+
 	</div>
 
 	<script type="text/babel">
+
 		var destination = document.querySelector("#container");
 
 
@@ -43,7 +46,7 @@
 
 
 		var TodoList = React.createClass({
-			getInitialState: function () {
+			getInitialState: function() {
 				return {
 					items: []
 				};
@@ -51,6 +54,7 @@
 
 			addItem: function(e) {
 				var itemArray = this.state.items;
+
 				itemArray.push(
 					{
 						text: this._inputElement.value,
@@ -71,8 +75,7 @@
 					<div className="todoListMain">
 						<div className="header">
 							<form onSubmit={this.addItem}>
-								<input ref={(a) => this._inputElement = a} 
-										placeholder="Enter Task">
+								<input ref={(a) => this._inputElement = a} placeholder="Enter Task">
 								</input>
 								<button type="submit">Add</button>
 							</form>
@@ -84,12 +87,15 @@
 		});
 
 		ReactDOM.render(
-			<div><TodoList/></div>,
+			<div>
+				<TodoList/>
+			</div>,
 			destination
 		);
 	</script>
-</body>
 
+
+</body>
 
 </html>
 
