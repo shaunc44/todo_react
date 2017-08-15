@@ -1,3 +1,6 @@
+import 'index.css';
+
+
 var destination = document.querySelector("#container");
 
 

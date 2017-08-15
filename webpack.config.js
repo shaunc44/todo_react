@@ -1,13 +1,13 @@
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: 			__dirname + '/app/index.html',
+	template: 			__dirname + '/app/components/index.html',
 	filename: 			'index.html',
 	inject: 				'body'
 })
 
 
 module.exports = {
-	entry: 					__dirname + '/app/index.js',
+	entry: 					__dirname + '/app/components/index.js',
 	module: {
 		loaders: [
 			{
@@ -22,4 +22,17 @@ module.exports = {
 		path: 				__dirname + '/build'
 	},
 	plugins: 				[HTMLWebpackPluginConfig]
+};
+
+
+module.exports = {
+	entry: 					__dirname + '/app/components/index.css',
+	module: {
+		rules: [
+			{
+				test: 		/\.css$/,
+				use: 			[ 'style-loader', 'css-loader' ]
+			}
+		]
+	}
 };
