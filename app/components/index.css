@@ -5,8 +5,9 @@ body {
 }
 
 #container {
-	max-width: 			275px;
+	max-width: 			325px;
 	margin: 			auto;
+	text-align: 		center;
 }
 
 .todoListMain .header input {
