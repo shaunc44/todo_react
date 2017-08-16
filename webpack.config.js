@@ -5,12 +5,6 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	inject: 				'body'
 })
 
-// var ExtractCssBlockPlugin = require('extract-css-block-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-
-// var ExtractCSS = new ExtractTextPlugin("css!./index.css");
-
 
 module.exports = {
 	entry: 					__dirname + '/app/components/index.js',
@@ -25,13 +19,7 @@ module.exports = {
 				test: 		/\.css$/,
 				use: 		['style-loader', 'css-loader']
 			}
-		],
-		// rules: [
-		// 	{
-		// 		test: 		/\.css$/,
-		// 		use: 		['style-loader', 'css-loader']
-		// 	}
-		// ]
+		]
 	},
 	output: {
 		filename: 			'transformed.js',

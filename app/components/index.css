@@ -4,6 +4,11 @@ body {
 	font-family:		sans-serif;
 }
 
+#container {
+	max-width: 			275px;
+	margin: 			auto;
+}
+
 .todoListMain .header input {
 	padding: 			10px;
 	font-size: 			16px;

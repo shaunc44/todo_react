@@ -1,12 +1,6 @@
-// import "!style-loader!css-loader!index.css";
 require("./index.css");
-
-
 var React = require('react');
 var ReactDOM = require('react-dom');
-// var TodoList = require('index.html');
-
-
 
 
 var destination = document.querySelector("#container");
