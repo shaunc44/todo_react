@@ -1,5 +1,5 @@
 body {
-	padding:			50px;
+	padding:			10px;
 	background-color: 	#6CF;
 	font-family:		sans-serif;
 }
@@ -35,6 +35,7 @@ body {
 	list-style: 		none;
 	padding-left: 		0;
 	width: 				255px;
+	margin: 			auto;
 }
 
 .todoListMain .theList li {
@@ -44,5 +45,27 @@ body {
 	margin-bottom: 		15px;
 	border-radius: 		5px;
 }
+
+
+/*@media only screen 
+	and (min-width: 0px) 
+	and (max-width: 480px) {
+		#container {
+			max-width: 			325px;
+			margin: 			auto;
+			text-align: 		center;
+		}
+}*/
+
+
+
+
+
+
+
+
+
+
+
 
 
