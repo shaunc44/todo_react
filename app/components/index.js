@@ -1,4 +1,12 @@
-import 'index.css';
+// import "!style-loader!css-loader!index.css";
+require("./index.css");
+
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+// var TodoList = require('index.html');
+
+
 
 
 var destination = document.querySelector("#container");
@@ -10,11 +18,7 @@ var TodoItems = React.createClass({
   render: function() {
     var todoEntries = this.props.entries;
     function createTasks(item) {
-      return (
-        <li key={item.key}>
-          {item.text}
-        </li>
-      );
+      return <li key={item.key}>{item.text}</li>
     }
 
     var listItems = todoEntries.map(createTasks);
