@@ -9,10 +9,24 @@ var destination = document.querySelector("#container");
 // TodoItems Class ****************************************
 var TodoItems = React.createClass({
 
+  propTypes: {
+    onDelete: React.PropTypes.func
+  },
+
+  // delete(idx,itemText) {
+  //   if (this.props.onDelete) {
+  //     this.props.onDelete(idx, item);
+  //   }
+  // },
+
   render: function() {
+    // var self = this;
     var todoEntries = this.props.entries;
-    function createTasks(item) {
-      return <li key={item.key}>{item.text}</li>
+    function createTasks(item, idx) {
+      var deleteFunction = function() {
+        self.delete(idx, item);
+      }
+      return <li key={idx + item.key} onClick={deleteFunction}>{item.text}</li>
     }
 
     var listItems = todoEntries.map(createTasks);
@@ -51,10 +65,16 @@ var TodoList = React.createClass({
     e.preventDefault();
   },
 
+  deleteItem(idx, itemText) {
+    var deletedElement = this.state.items.splice(idx, 1)
+    this.setState({items: this.state.items});
+  },
+
   render: function() {
     return (
       <div className="todoListMain">
         <div className="header">
+          <TodoList items={this.state.itemsl} onDelete={this.deleteItem} />
           <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a} placeholder="Enter Task"></input>
             <button type="submit">Add</button>
